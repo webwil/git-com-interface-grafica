@@ -1,1 +1,2 @@
-# LocalGit
+#LocalGit
+Trabalhando com git local

@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 320px){
+    .jl-page-wrapper, .jl-preloader {
+        width: 100%;
+        height: 100vh;
+        display: table;
+        background-color: var(--bg-defalt);
+        border: 30px solid var(--border-page);
+    }
+
+    .jl-preloader {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .jl-preloader-inner {
+        margin-top: -15px;
+    }
+
+    .jl-topbar {
+        width: 100%;
+        height: 110px;
+        display: block;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .jl-logo {
+        width: 74px;
+        height: 110px;
+        float: left;
+        margin-left: 60px;
+        background-color: var(--color-secondary);
+        border-radius: 0 0 37px 0;
+    }
+
+    .jl-logo img {
+        width: 46px;
+        height: 31px;
+        display: block;
+        margin: 55px auto 0;
+    }
+
+    .jl-menu {
+        display: none;
+    }
+
+    .jl-btn-contact {
+        width: 45px;
+        height: 45px;
+        display: block;
+        background-color: var(--color-secondary);
+        background-image: url('../images/icon-contact-close.svg');
+        background-repeat: no-repeat;
+        position: fixed;
+        bottom: 45px;
+        right: 45px;
+        border-radius: 50%;
+        z-index: 200;
+        transition: all 0.2s ease-out;
+        border: none;
+        cursor: pointer;
+    }
+
+    .jl-contact-info {
+        width: 245px;
+        height: 165px;
+        background-color: var(--border-page);
+        display: none;
+        padding: 25px 13px;
+        position: fixed;
+        bottom: 115px;
+        right: 65px;
+        z-index: 200;
+        border-radius: 0.5em 0.5em 0 0.5em;
+    }
+
+    .jl-contact-info-inner {
+        display: table;
+        width: 100%;
+        float: right;
+    }
+
+    .jl-contact-info-inner p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .jl-social-links {
+        width: 100%;
+        height: 45px;
+        display: block;
+        position: relative;
+        left: -12px;
+    }
+
+    .jl-social {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+    }
+
+    .jl-social > img {
+        width: 20px;
+        height: auto;
+        display: block;
+        margin: 12px auto 0;
+    }
+
+    .jl-corner {
+        width: 25px;
+        height: 25px;
+        display: block;
+        float: right;
+        display: relative;
+    }
+
+    .jl-corner:after {
+        content: '';
+        width: 25px;
+        height: 25px;
+        display: block;
+        position: absolute;
+        bottom: -23px;
+        right: 0;
+        background: transparent url('../images/corner.svg') no-repeat;
+
+    }
+
+    /*-------------HOME--------------*/
+
+    .jl-display-text {
+        margin-top: 10%;
+    }
+
+    #jl-home-presentation {
+        background-image: url('../images/joao-lemon-designer-home.png');
+        background-repeat: no-repeat;
+        background-position: 100% bottom;
+    }
+
+}
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 992px){
+    .jl-menu {
+        display: table;
+        float: left;
+        height: 110px;
+        margin-left: 30px;
+    }
+
+    .jl-menu a {
+        
+        font-size: 16px;
+        color: var(--font-color-primary);
+        text-decoration: none;
+        text-transform: lowercase;
+        display: inline-block;
+        margin: 50px 20px 0 20px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .jl-menu a:first-child {
+        margin-left: 0;
+    }
+
+    .jl-menu a:hover {
+        color: var(--color-secondary);
+    }
+
+    .jl-menu a:before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-secondary);
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        transition: all 0.2s ease-out;
+        transform: scale(0, 1);
+        transform-origin: center left;
+    }
+
+    .jl-menu a:hover:before {
+        transform: scale(1, 1);
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+}
+
+@media screen and (min-width: 1364px){
+
+}
+
+@media screen and (min-width: 1600px){
+
+}
+
+/* CLASSES AUXILIARES */
+
+:root {
+    --border-page: #000;
+    --bg-defalt: #1C1C1C;
+    --color-secondary: #2CCB69;
+    --font-color-primary: #bcbcbc;
+    --font-color-secondary: #4D4C4C;
+  }
+
+.jl-font-title {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: normal;    
+}
+
+.jl-font-title-big {
+    font-size: 120px;
+}
+
+.jl-font-content {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.colorr-dark {
+    color: #000;
+}
+.colorr-primary {
+    color: #1C1C1C;
+}
+.colorr-primary {
+    color: #2CCB69;
+}
+.colorr-clear {
+    color: #bcbcbc;
+}
+.colorr-tertiary {
+    color: #4D4C4C;
+}
+   
+   
+.background-colorr-dark {
+    background-color: #000;
+}
+.background-colorr-primary {
+    background-color: #1C1C1C;
+}
+.background-colorr-primary {
+    background-color: #2CCB69;
+}
+.background-colorr-clear {
+    background-color: #bcbcbc;
+}
+.background-colorr-tertiary {
+    background-color: #4D4C4C;
+}
+
+.jl-mar-15 {
+    margin: 15px;
+}
+
+.jl-mar-top-15 {
+    margin-top: 15px;
+}
+
+.jl-mar-left-15 {
+    margin-left: 15px;
+}
+
+.jl-mar-right-15 {
+    margin-right: 15px;
+}
+
+.jl-mar-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.jl-pad-15 {
+    padding: 15px;
+}
+
+.jl-pad-top-15 {
+    padding-top: 15px;
+}
+
+.jl-pad-left-15 {
+    padding-left: 15px;
+}
+
+.jl-pad-right-15 {
+    padding-right: 15px;
+}
+
+.jl-pad-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.jl-full-height {
+    height: 100vh;
+}
+
+.jl-first-section {
+    height: calc(100vh - 30px);
+}
+
+
+   /* CLASSES DE COMPORTAMENTO */
+
+.jl-is-open {
+    display: block;
+}
+
+.jl-change-icon {
+    background-position-y: -45px;
+}
+
+.jl-fade-out {
+    animation: fadeOut 2s forwards ease-out;
+}
